@@ -1,3 +1,9 @@
+### Common Valiables
+variable "common_system" {
+  type        = string
+  description = "System Name"
+}
+### VPC Valiables
 variable "vpc_cidr" {
   type        = string
   description = "VPC CIDR"

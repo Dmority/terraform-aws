@@ -1,3 +1,6 @@
+# Common Settings
+common_system = "sample"
+
 # VPC Settings
 vpc_cidr            = "192.168.0.0/16"
 vpc_azs             = ["ap-northeast-1a", "ap-northeast-1c"]
