@@ -1,4 +1,4 @@
 output "vpc_output_all" {
-  value = module.vpc
+  value       = module.vpc
+  description = "all output from vpc module"
 }
-
