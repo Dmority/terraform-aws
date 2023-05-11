@@ -1,5 +1,3 @@
-## Graph
-![Graph](graph.svg)
 ## Requirements
 
 | Name | Version |
