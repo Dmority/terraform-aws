@@ -58,6 +58,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Change Directory
+        run: cd env/dev
+        
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
