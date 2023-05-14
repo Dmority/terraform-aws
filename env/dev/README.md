@@ -1,3 +1,6 @@
+## Overview
+![Overview](overview.drawio.svg)
+
 ## Requirements
 
 | Name | Version |
@@ -8,12 +11,14 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.62.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.66.1 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_s3_logs"></a> [s3\_logs](#module\_s3\_logs) | terraform-aws-modules/s3-bucket/aws | 3.10.1 |
+| <a name="module_sg_alb"></a> [sg\_alb](#module\_sg\_alb) | terraform-aws-modules/security-group/aws | 4.17.2 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 4.0.1 |
 
 ## Resources
@@ -36,4 +41,7 @@
 
 | Name | Description |
 |------|-------------|
-| <a name="output_vpc_output_all"></a> [vpc\_output\_all](#output\_vpc\_output\_all) | all output from vpc module |
+| <a name="output_s3_logs_bucket_id"></a> [s3\_logs\_bucket\_id](#output\_s3\_logs\_bucket\_id) | value of s3\_logs\_bucket\_id |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | value of vpc\_id |
+| <a name="output_vpc_private_subnets"></a> [vpc\_private\_subnets](#output\_vpc\_private\_subnets) | value of vpc\_private\_subnets |
+| <a name="output_vpc_public_subnets"></a> [vpc\_public\_subnets](#output\_vpc\_public\_subnets) | value of vpc\_public\_subnets |
