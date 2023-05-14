@@ -5,9 +5,10 @@ terraform {
       version = "~> 4.0"
     }
   }
-  #  backend "s3" {
-  #    bucket = BACKEND_BUCKET
-  #    key    = "terraform.state"
-  #    region = "ap-northeast-1"
-  #  }
+  backend "remote" {
+    organization = "example-org-3454eb"
+    workspaces {
+      name = "terraform-aws"
+    }
+  }
 }
