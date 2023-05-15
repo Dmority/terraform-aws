@@ -26,6 +26,6 @@ module "eks" {
   subnet_ids               = module.vpc.private_subnets
   control_plane_subnet_ids = module.vpc.private_subnets
 
-  kms_key_owners         = ["arn:aws:iam::${local.account_id}:role/GithubActions"]
-  kms_key_administrators = ["arn:aws:iam::${local.account_id}:role/GithubActions"]
+  kms_key_owners         = ["arn:aws:iam::${local.account_id}:role/GithubActions", "arn:aws:iam::${local.account_id}:user/mac-morita"]
+  kms_key_administrators = ["arn:aws:iam::${local.account_id}:role/GithubActions", "arn:aws:iam::${local.account_id}:user/mac-morita"]
 }
