@@ -17,3 +17,8 @@ variable "vpc_public_subnets" {
   type        = list(string)
   description = "Public Subnets CIDR"
 }
+
+variable "vpc_database_subnets" {
+  type        = list(string)
+  description = "Database Subnets CIDR"
+}
