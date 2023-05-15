@@ -12,7 +12,7 @@ tfsec
 
 # ドキュメント生成
 cat overview.template.md > README.md
-terraform-docs >> README.md
+terraform-docs markdown ./ >> README.md
 ```
 
 ## Requirements
@@ -62,7 +62,11 @@ terraform-docs >> README.md
 
 | Name | Description |
 |------|-------------|
+| <a name="output_aurora_cluster_endpoint"></a> [aurora\_cluster\_endpoint](#output\_aurora\_cluster\_endpoint) | value of aurora cluster endpoint |
+| <a name="output_aurora_reader_endpoint"></a> [aurora\_reader\_endpoint](#output\_aurora\_reader\_endpoint) | value of aurora reader endpoint |
+| <a name="output_aurora_security_group_id"></a> [aurora\_security\_group\_id](#output\_aurora\_security\_group\_id) | value of aurora security group id |
 | <a name="output_s3_logs_bucket_id"></a> [s3\_logs\_bucket\_id](#output\_s3\_logs\_bucket\_id) | value of s3\_logs\_bucket\_id |
+| <a name="output_vpc_database_subnets"></a> [vpc\_database\_subnets](#output\_vpc\_database\_subnets) | value of vpc\_database\_subnets |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | value of vpc\_id |
 | <a name="output_vpc_private_subnets"></a> [vpc\_private\_subnets](#output\_vpc\_private\_subnets) | value of vpc\_private\_subnets |
 | <a name="output_vpc_public_subnets"></a> [vpc\_public\_subnets](#output\_vpc\_public\_subnets) | value of vpc\_public\_subnets |

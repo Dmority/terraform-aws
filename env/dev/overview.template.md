@@ -12,6 +12,6 @@ tfsec
 
 # ドキュメント生成
 cat overview.template.md > README.md
-terraform-docs >> README.md
+terraform-docs markdown ./ >> README.md
 ```
 
