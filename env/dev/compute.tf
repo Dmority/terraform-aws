@@ -55,8 +55,17 @@ module "eks" {
       ]
     }
   }
+
+  # Create a new cluster where both an identity provider and Fargate profile is created
+  # will result in conflicts since only one can take place at a time
+  # # OIDC Identity provider
+  cluster_identity_providers = {
+    sts = {
+      client_id = "sts.amazonaws.com"
+    }
+  }
+
   # aws-auth configmap
-  create_aws_auth_configmap = true
   manage_aws_auth_configmap = true
   aws_auth_roles = [
     {
