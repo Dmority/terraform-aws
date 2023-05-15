@@ -51,7 +51,7 @@ on:
   pull_request:
 env:
   AWS_REGION: ap-northeast-1
-  AWS_ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:GithubActions/
+  AWS_ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GithubActions
 
 jobs:
   terraform:
