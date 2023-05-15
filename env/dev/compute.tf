@@ -28,4 +28,32 @@ module "eks" {
 
   kms_key_owners         = ["arn:aws:iam::${local.account_id}:role/GithubActions", "arn:aws:iam::${local.account_id}:user/mac-morita"]
   kms_key_administrators = ["arn:aws:iam::${local.account_id}:role/GithubActions", "arn:aws:iam::${local.account_id}:user/mac-morita"]
+
+  # EKS Managed Node Group(s)
+  eks_managed_node_group_defaults = {
+    instance_types = ["m6i.large", "m5.large", "m5n.large", "m5zn.large"]
+  }
+
+  eks_managed_node_groups = {
+    blue = {}
+    green = {
+      min_size     = 1
+      max_size     = 2
+      desired_size = 1
+
+      instance_types = ["t3.large"]
+      capacity_type  = "SPOT"
+    }
+  }
+  # Fargate Profile(s)
+  fargate_profiles = {
+    default = {
+      name = "default"
+      selectors = [
+        {
+          namespace = "default"
+        }
+      ]
+    }
+  }
 }
