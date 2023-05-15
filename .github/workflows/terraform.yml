@@ -63,7 +63,9 @@ jobs:
         with:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: test
-        run: echo Message
+        run: echo $SECRET_TEST
+        env:
+          SECRET_TEST: ${{ secrets.TEST }}
 
       - name: Terraform Format
         id: fmt
