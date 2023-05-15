@@ -35,7 +35,6 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    blue = {}
     green = {
       min_size     = 1
       max_size     = 2
@@ -56,4 +55,22 @@ module "eks" {
       ]
     }
   }
+  # aws-auth configmap
+  create_aws_auth_configmap = true
+  manage_aws_auth_configmap = true
+  aws_auth_roles = [
+    {
+      rolearn  = "arn:aws:iam::${local.account_id}:role/GithubActions"
+      username = "GithubActions"
+      groups   = ["system:masters"]
+    },
+  ]
+  aws_auth_users = [
+    {
+      userarn  = "arn:aws:iam::${local.account_id}:user/mac-morita"
+      username = "mac-morita"
+      groups   = ["system:masters"]
+    },
+  ]
 }
+
