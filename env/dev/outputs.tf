@@ -45,8 +45,8 @@ output "aurora_cluster_endpoint" {
   description = "value of aurora cluster endpoint"
 }
 
-output "aurora_reader_endpoint" {
-  value       = module.aurora_postgresql.reader_endpoint
+output "aurora_cluster_reader_endpoint" {
+  value       = module.aurora_postgresql.cluster_reader_endpoint
   description = "value of aurora reader endpoint"
 }
 
